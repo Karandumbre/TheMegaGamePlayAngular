@@ -1,0 +1,247 @@
+/*------------------------------------------------------------
+# hero
+-----------------------------------------------------------*/
+.hero-content {
+  padding: 70px 0;
+  background: url("../../../assets/The\ Pubg\ Banners/banner-2.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position-x: center;
+}
+
+.hero-content .entry-header {
+  position: relative;
+  text-align: center;
+}
+
+.hero-content .entry-header h2 {
+  padding: 50px;
+  margin: 0;
+  font-family: mountains;
+  font-size: 120px;
+  background: -webkit-linear-gradient(#00d0ff, #25ffbf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content .entry-header .entry-meta-date {
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: hsl(0, 0%, 90%);
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .hero-content .entry-header h2 {
+    font-size: 172px;
+  }
+
+  .hero-content .entry-header .entry-meta-date {
+    top: 60px;
+  }
+}
+
+
+.countdown-holder {
+  margin-bottom: 30px;
+}
+
+.countdown-holder .dday,
+.countdown-holder .dhour,
+.countdown-holder .dmin,
+.countdown-holder .dsec {
+  display: block;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1;
+  color: hsl(0, 0%, 100%);
+}
+
+.countdown-holder label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+}
+
+/*------------------------------------------------------------
+## hero-content entry-footer
+------------------------------------------------------------*/
+.hero-content .entry-footer {
+  margin-top: 125px;
+  text-align: center;
+}
+
+.hero-content .entry-footer .btn {
+  background: hsl(0, 0%, 100%);
+  padding: 16px 40px;
+  border-radius: 0;
+  margin-right: 20px;
+  color: hsl(0, 0%, 17%);
+  font-weight: 600;
+}
+
+.hero-content .entry-footer a:hover,
+.hero-content .entry-footer .current {
+  background: -webkit-linear-gradient(#00d0ff, #25ffbf);
+  color: hsl(0, 0%, 0%);
+}
+
+/*------------------------------------------------------------
+# The Lineup Artists - Headliners
+------------------------------------------------------------*/
+.content-section {
+  width: 100%;
+  // padding-bottom: 120px;
+  background: url("../../../assets/images/middle-cover.jpg") no-repeat;
+  background-size: 100% auto;
+}
+
+.content-section .middle-cover {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.content-section .middle-cover img {
+  max-width: 100%;
+}
+
+
+/*------------------------------------------------------------
+## lineup-artists-headline
+------------------------------------------------------------*/
+
+
+.lineup-artists-headline .entry-title p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: hsl(0, 0%, 48%);
+}
+
+.lineup-artists-headline .entry-title h2 {
+  width: 100%;
+  font-size: 48px;
+  font-weight: 600;
+  color: hsl(0, 0%, 0%);
+}
+
+
+.lineup-artists-description .entry-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: hsl(0, 0%, 9%);
+}
+
+
+.the-complete-lineup .entry-title p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: hsl(0, 0%, 48%);
+}
+
+.the-complete-lineup .entry-title h2 {
+  width: 100%;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 600;
+  color: hsl(0, 0%, 0%);
+}
+
+
+
+.the-complete-lineup-artists .artist-single h2 {
+  margin-top: 38px;
+  font-size: 24px;
+  font-weight: 600;
+  color: hsl(0, 0%, 2%);
+  text-align: center;
+}
+
+
+.homepage-next-events .entry-title p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: hsl(0, 0%, 48%);
+}
+
+.homepage-next-events .entry-title h2 {
+  width: 100%;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 600;
+  color: hsl(0, 0%, 0%);
+}
+
+
+
+.next-event-slider .entry-content p {
+  font-size: 14px;
+  color: hsl(0, 0%, 100%);
+}
+
+
+/*------------------------------------------------------------
+# home-page-last-news
+------------------------------------------------------------*/
+
+.home-page-last-news .entry-title p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: hsl(0, 0%, 48%);
+}
+
+.home-page-last-news .entry-title h2 {
+  width: 100%;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 600;
+  color: hsl(0, 0%, 0%);
+}
+
+
+.countdown-holder .dday,
+.countdown-holder .dhour,
+.countdown-holder .dmin,
+.countdown-holder .dsec {
+  display: block;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1;
+  color: hsl(0, 0%, 100%);
+}
+
+
+
+@media (min-width:786px) {
+  .container {
+    .row {
+      .col-12 {
+        margin-top: 10%;
+      }
+    }
+  }
+}
+
+@media (max-width:992px) {
+  .hero-content .entry-header h2 {
+    padding-top: 120px;
+    font-size: 72px;
+  }
+}
+
+
+.banner-text {}

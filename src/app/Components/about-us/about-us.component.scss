@@ -1,0 +1,214 @@
+.main-content {
+  margin: 120px 0 60px 0;
+}
+
+.main-content .entry-header .entry-title p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #7a7a7a;
+}
+
+.main-content .entry-header .entry-title h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 48px;
+  font-weight: 600;
+  color: #040608;
+}
+
+.main-content .entry-content {
+  margin-top: 50px;
+}
+
+.main-content .entry-content .entry-header h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #040608;
+}
+
+.main-content .entry-content .entry-description p {
+  margin: 0 !important;
+  padding: 0;
+  margin-top: 25px !important;
+  font-size: 15px;
+  font-weight: 300;
+  color: #989898;
+  line-height: 2;
+  word-break: break-all;
+  hyphens: auto;
+}
+
+.main-content .featured-image {
+  margin-top: 110px;
+}
+
+.main-content .featured-image img {
+  max-width: 100%;
+}
+
+
+
+
+.start-counter,
+.counter-k,
+.entry-title,
+.entry-description p,
+p {
+  color: black !important;
+}
+
+.member-profile {
+  h4 {
+    color: white;
+  }
+
+  span {
+    color: white;
+  }
+
+}
+
+
+
+
+
+/*
+Tutorial Name: Meet the Team
+Description: A simple concept for members section.
+Author: Stanislav Kostadinov
+Author URI: http://stanislav.it
+Usage: You can use this code for free in personal and commercial projects if you build upon it. You are not allowed to republish, redistribute or sell "as-is". 
+*/
+
+
+/* Separators */
+.separator {
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.2);
+  width: 30px;
+  height: 5px;
+}
+
+
+
+/* 03. SPEAKERS SETTINGS ============================================ */
+
+#speakers {
+  padding: 60px 0;
+  background: #4593e3;
+  text-align: center;
+}
+
+#speakers p {
+  padding: 20px 0 60px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+#speakers h3 {
+  padding: 0 0 15px;
+  font-family: 'mountains';
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+#speakers h4 {
+  margin-top: -20px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+#speakers h4 span {
+  display: block;
+  position: relative;
+  left: -40px;
+  top: 10px;
+  font-size: 20px;
+  background: none;
+  padding: 0;
+}
+
+#speakers img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 50%;
+  border: 15px solid transparent;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.18);
+  transition: all 0.1s ease-in;
+  // object-fit: cover;
+}
+
+#speakers img:hover {
+  border: 15px solid #3980C9;
+  position: relative;
+  z-index: 10;
+  transition: all 0.1s ease-in;
+}
+
+#speakers span {
+  padding: 8px 20px;
+  position: relative;
+  top: -64px;
+  // left: -42px;
+  display: inline-block;
+  background: #4593e3;
+  border-radius: 0 16px 16px 0;
+  font-size: 16px;
+}
+
+
+.member-profile {
+  .unhover_img {
+    filter: grayscale(100%);
+  }
+}
+
+
+.member-profile:hover {
+  span.profile {
+    display: none;
+  }
+
+  .unhover_img {
+    filter: none;
+  }
+}
+
+
+
+/* Social Networks Meta */
+#speakers li {
+  display: inline-block;
+  padding: 0 6px;
+  font-size: 18px;
+}
+
+#speakers li a {
+  color: rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in;
+}
+
+#speakers li a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* Mobile Devices Optimization */
+@media (min-width: 568px) and (max-width: 992px) {
+
+  .row1 .col-md-4 {
+    display: inline-block;
+    max-width: 50%;
+  }
+
+  #speakers img {
+    max-width: 300px;
+  }
+
+}

@@ -1,0 +1,72 @@
+ <div class="hero-content" #home>
+   <div class="container">
+     <div class="row">
+       <div class="col-12">
+         <div class="entry-header">
+           <h2>Gamerz World</h2>
+
+           <div class="entry-meta-date">
+             {{Date() | date:'dd.MM.yyyy'}}
+           </div>
+         </div>
+         <div class="countdown flex flex-wrap justify-content-between" data-date="2018/06/06">
+           <div class="countdown-holder">
+             <div class="dday">{{days}}</div>
+             <label>Days</label>
+           </div>
+
+           <div class="countdown-holder">
+             <div class="dhour">{{hours}}</div>
+             <label>Hours</label>
+           </div>
+
+           <div class="countdown-holder">
+             <div class="dmin">{{minutes}}</div>
+             <label>Minutes</label>
+           </div>
+
+           <div class="countdown-holder">
+             <div class="dsec">{{seconds}}</div>
+             <label>Seconds</label>
+           </div>
+           <!-- <div class="countdown-holder w-100 text-center">
+             <div class="dsec text-uppercase" style="font-family: century_gothic;">
+               Coming Soon
+             </div>
+           </div> -->
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <div #event class="content-section">
+   <div class="container">
+     <div class="row">
+       <div class="col-12">
+         <div class="lineup-artists-headline">
+           <div class="entry-title">
+             <p>JUST THE BEST</p>
+             <h2>The Event Timeline</h2>
+           </div>
+         </div>
+         <div>
+           <app-event></app-event>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <div class="content-section">
+   <app-upcoming-events></app-upcoming-events>
+ </div>
+
+
+ <div #aboutUs class="content-section">
+   <app-about-us></app-about-us>
+ </div>
+
+ <div #contact class="content-section">
+   <app-contact></app-contact>
+ </div>
