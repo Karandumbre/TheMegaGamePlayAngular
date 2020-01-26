@@ -75,8 +75,7 @@
             <div class="content">
               <h3 class="title">End of the Game</h3>
               <p class="description">
-                At the end, Winner would be declared and communicated through WhatsApp. The winning amount will be
-                directly credited to the winners account number
+                At the end, Winner would be declared and communicated through WhatsApp.
               </p>
             </div>
           </a>
@@ -122,23 +121,28 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <div class="modal-content" style="margin-top:75px ;">
+    <div class="modal-content" [ngClass]="modalHeader === 'Payments' ? 'marginTop' : ''">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel" class="text-black">Payment</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="exampleModalLabel" class="text-black">{{modalHeader}}</h5>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)=hideQRCode()>
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body text-center">
+      <div class="modal-body text-center" *ngIf="acceptTerms">
         <p class="text-black text-center" style="font-size: 30px;font-weight: 700;">Entry Fee : 50 &#8377;</p>
-        <img src="../../../assets/The Pubg Banners/qr.jpg" alt="" class="img-fluid" style="object-fit: cover;
-        width: 350px;
-        height: 410px;
-    ">
+        <img src="../../../assets/The Pubg Banners/qr.jpg" alt="" class="img-fluid"
+          style="object-fit: cover;width: 350px;height: 410px;">
+      </div>
+
+      <div class="modal-body" style="height: 75vh;overflow-y: scroll;" *ngIf="acceptTerms === false">
+        <p *ngFor="let item of terms | keyvalue;let i = index">{{i + 1}}.{{item.value}}</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn" [ngClass]="modalHeader === 'Payments' ? 'btn-secondary' : 'btn-primary' " data-dismiss="modal" (click)=hideQRCode()
+         >{{btnText}}</button>
       </div>
     </div>
   </div>
+
 </div>

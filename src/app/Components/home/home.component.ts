@@ -14,20 +14,23 @@ export class HomeComponent implements OnInit {
 
   private timer;
   private compareDate = new Date();
-  private seconds: any;
-  private minutes: any;
-  private hours: any;
-  private days: any;
+  public seconds: any;
+  public minutes: any;
+  public hours: any;
+  public days: any;
+  public currentEvent: any;
   // tslint:disable-next-line: variable-name
   constructor(private _commonService: CommonService) { }
 
   ngOnInit() {
     this._commonService.changeRouteData('');
-    this.compareDate.setDate(this.compareDate.getDate() + 7); //just for this demo today + 7 days
+    this._commonService.getEventData().subscribe(res => {
+      this.currentEvent = res[0];
+      this.compareDate = new Date(this.currentEvent.date);
+    });
+    this.compareDate.setDate(this.compareDate.getDate() + 7); // just for this demo today + 7 days
     this.countDown();
     this._commonService.scrollViewTag.subscribe(res => {
-      console.log('res', res);
-
       switch (res) {
         case 'aboutUs':
           this.aboutUs.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -45,16 +48,12 @@ export class HomeComponent implements OnInit {
   }
 
   countDown() {
-
     this.timer = setInterval(() => {
       this.timeBetweenDates(this.compareDate);
     }, 1000);
 
   }
 
-  Date() {
-    return new Date();
-  }
   timeBetweenDates(toDate) {
     const dateEntered = toDate;
     const now = new Date();
@@ -74,6 +73,4 @@ export class HomeComponent implements OnInit {
       this.seconds %= 60;
     }
   }
-
-
 }

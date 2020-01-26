@@ -40,7 +40,7 @@ import { CookieService } from 'ngx-cookie-service';
         path: 'an-admin',
         loadChildren: () => import('./Admin/admin/admin.module').then((m) => m.AdminModule)
       }
-    ])
+    ], { useHash: true })
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

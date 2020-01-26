@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   showHeader = true;
   // tslint:disable-next-line: variable-name
   constructor(private _commonService: CommonService) {
-
+    this.headerCss = 'transparent';
   }
 
   ngOnInit() {
@@ -22,8 +22,8 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  @HostListener('window:scroll', ['$event']) getScrollHeight() {
-    window.pageYOffset > 500 ? this.headerCss = 'not-transparent' : this.headerCss = 'transparent';
+  @HostListener('window:scroll') getScrollHeight() {
+    this.headerCss = window.pageYOffset > 500 ? 'not-transparent' : 'transparent';
   }
 
   scrollIntoView(el) {

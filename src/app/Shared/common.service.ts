@@ -34,7 +34,18 @@ export class CommonService {
   }
 
   getTimelineData(): Observable<any> {
-    return this.http.get<any>(`${environment.serverui}timelineData`);
+    return this.http.get<any>(`${environment.serverui}timelineData/timelineData`);
   }
 
+  getEventData(): Observable<any> {
+    return this.http.get<any>(`${environment.serverui}timelineData/getEventData`);
+  }
+
+  addUpdateEventData(data): Observable<any> {
+    return this.http.post<any>(`${environment.serverui}timelineData/addUpdateEventData`, data);
+  }
+
+  readTermsAndCondition(): Observable<any> {
+    return this.http.get<any>('../../assets/Data/terms.json');
+  }
 }

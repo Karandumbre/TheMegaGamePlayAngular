@@ -38,13 +38,23 @@
 
 @media screen and (min-width: 992px) {
   .hero-content .entry-header h2 {
-    font-size: 172px;
+    font-size: 120px;
   }
 
   .hero-content .entry-header .entry-meta-date {
     top: 60px;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .hero-content .entry-header h2 {
+    font-size: 120px;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+
+}
+
 
 
 .countdown-holder {

@@ -1,15 +1,15 @@
  <div class="hero-content" #home>
-   <div class="container">
+   <div class="container" data-toggle="modal" data-target="#gameModal">
      <div class="row">
        <div class="col-12">
          <div class="entry-header">
-           <h2>Gamerz World</h2>
+           <h2>The Mega Gameplay</h2>
 
-           <div class="entry-meta-date">
-             {{Date() | date:'dd.MM.yyyy'}}
+           <div class="entry-meta-date" *ngIf="currentEvent">
+             {{currentEvent.date | date:'dd.MM.yyyy'}}
            </div>
          </div>
-         <div class="countdown flex flex-wrap justify-content-between" data-date="2018/06/06">
+         <div class="countdown flex flex-wrap justify-content-between">
            <div class="countdown-holder">
              <div class="dday">{{days}}</div>
              <label>Days</label>
@@ -29,11 +29,6 @@
              <div class="dsec">{{seconds}}</div>
              <label>Seconds</label>
            </div>
-           <!-- <div class="countdown-holder w-100 text-center">
-             <div class="dsec text-uppercase" style="font-family: century_gothic;">
-               Coming Soon
-             </div>
-           </div> -->
          </div>
        </div>
      </div>
@@ -46,7 +41,6 @@
        <div class="col-12">
          <div class="lineup-artists-headline">
            <div class="entry-title">
-             <p>JUST THE BEST</p>
              <h2>The Event Timeline</h2>
            </div>
          </div>
@@ -69,4 +63,25 @@
 
  <div #contact class="content-section">
    <app-contact></app-contact>
+ </div>
+
+ <div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+   aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         ...
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         <button type="button" class="btn btn-primary">Save changes</button>
+       </div>
+     </div>
+   </div>
  </div>
