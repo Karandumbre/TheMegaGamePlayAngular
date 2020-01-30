@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  backendUri: 'http://54.227.113.76:3000/api/',
-  serverui: 'http://54.227.113.76:3000/'
+  backendUri: 'http://ec2-13-233-227-73.ap-south-1.compute.amazonaws.com/api/',
+  serverui: 'http://ec2-13-233-227-73.ap-south-1.compute.amazonaws.com/'
 };

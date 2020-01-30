@@ -84,7 +84,7 @@
           <a href="javascript:void(0)" class="timeline-content">
             <span class="timeline-year">Step 5</span>
             <div class="timeline-icon">
-              <i class="fa fa-apple" aria-hidden="true"></i>
+              <i class="fa fa-trophy" aria-hidden="true"></i>
             </div>
             <div class="content">
               <h3 class="title">Rewards</h3>
@@ -100,10 +100,10 @@
           <a href="javascript:void(0)" class="timeline-content">
             <span class="timeline-year">2020</span>
             <div class="timeline-icon">
-              <i class="fa fa-edit" aria-hidden="true"></i>
+              <i class="fa fa-check" aria-hidden="true"></i>
             </div>
             <div class="content">
-              <h3 class="title">VIP Passes</h3>
+              <h3 class="title">VIP Pass</h3>
               <p class="description">
                 The winning squad get a free pass to join the Mega Event.
                 Happy Gaming....
@@ -139,8 +139,8 @@
         <p *ngFor="let item of terms | keyvalue;let i = index">{{i + 1}}.{{item.value}}</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn" [ngClass]="modalHeader === 'Payments' ? 'btn-secondary' : 'btn-primary' " data-dismiss="modal" (click)=hideQRCode()
-         >{{btnText}}</button>
+        <button type="button" class="btn" [ngClass]="modalHeader === 'Payments' ? 'btn-secondary' : 'btn-primary' "
+          data-dismiss="modal" (click)=hideQRCode()>{{btnText}}</button>
       </div>
     </div>
   </div>

@@ -2,7 +2,7 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonService } from '../../Shared/common.service';
 
 @Component({
-  selector: 'app-home',
+  selector: 'megagameplay-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -20,7 +20,8 @@ export class HomeComponent implements OnInit {
   public days: any;
   public currentEvent: any;
   // tslint:disable-next-line: variable-name
-  constructor(private _commonService: CommonService) { }
+  constructor(private _commonService: CommonService) {
+  }
 
   ngOnInit() {
     this._commonService.changeRouteData('');

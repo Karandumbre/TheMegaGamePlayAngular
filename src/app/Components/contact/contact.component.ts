@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import { CommonService } from './../../Shared/common.service';
 
 @Component({
-  selector: 'app-contact',
+  selector: 'megagameplay-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
