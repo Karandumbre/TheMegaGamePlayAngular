@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Subject, Observable } from 'rxjs';
+import { Subject, Observable, pipe } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from './../../environments/environment';
+import { filter, map } from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -33,12 +35,19 @@ export class CommonService {
     return this.http.post(`${environment.serverui}clientMessages/getClientMessageUsingId`, { _id: id });
   }
 
-  getTimelineData(): Observable<any> {
-    return this.http.get<any>(`${environment.serverui}timelineData/timelineData`);
-  }
+  // getTimelineData() {
+  // return this.http.get<any>(`${environment.serverui}timelineData/timelineData`);
+  // }
 
   getEventData(): Observable<any> {
-    return this.http.get<any>(`${environment.serverui}timelineData/getEventData`);
+    // return this.http.get<any>(`${environment.serverui}timelineData/getEventData`);
+    return this.http.get<any>('./../../assets/Data/eventData.json').pipe(map(events => {
+      return events.filter(res => {
+        if (new Date(res.date) > new Date()) {
+          return res;
+        }
+      });
+    }));
   }
 
   addUpdateEventData(data): Observable<any> {
@@ -46,6 +55,6 @@ export class CommonService {
   }
 
   readTermsAndCondition(): Observable<any> {
-    return this.http.get<any>('../../assets/Data/terms.json');
+    return this.http.get<any>('./../../assets/Data/terms.json');
   }
 }

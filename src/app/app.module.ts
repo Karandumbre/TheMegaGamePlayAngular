@@ -1,10 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { HeaderComponent } from './Common/header/header.component';
 import { FooterComponent } from './Common/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
@@ -35,10 +33,6 @@ import { CookieService } from 'ngx-cookie-service';
       {
         path: '',
         component: HomeComponent
-      },
-      {
-        path: 'an-admin',
-        loadChildren: () => import('./Admin/admin/admin.module').then((m) => m.AdminModule)
       }
     ], { useHash: true })
   ],

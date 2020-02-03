@@ -1,5 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { CommonService } from '../../Shared/common.service';
+import { filter } from 'rxjs/operators';
+
 
 @Component({
   selector: 'megagameplay-home',

@@ -12,11 +12,9 @@
             <div class="content">
               <h3 class="title">Agreeing Terms & Conditons and Payment.</h3>
               <p class="description">
-                By agreeing Terms & Conditions kindly Scan the <a href="javascript:void(0)" data-toggle="modal"
-                  data-target="#exampleModal">QR
-                  code</a>.
-                and make payment for the amount displayed in the image. Lorem ipsum dolor, sit amet consectetur
-
+                By agreeing Terms & Conditions kindly scan the <a href="javascript:void(0)" data-toggle="modal"
+                  data-target="#exampleModal">QR code</a>. and make payment for the amount displayed in the image. Send
+                the screenshot to the below mentioned Whatsapp Number.
               </p>
             </div>
           </a>
@@ -125,22 +123,29 @@
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel" class="text-black">{{modalHeader}}</h5>
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)=hideQRCode()>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body text-center" *ngIf="acceptTerms">
-        <p class="text-black text-center" style="font-size: 30px;font-weight: 700;">Entry Fee : 50 &#8377;</p>
-        <img src="../../../assets/The Pubg Banners/qr.jpg" alt="" class="img-fluid"
-          style="object-fit: cover;width: 350px;height: 410px;">
-      </div>
+      <div class="modal-body" id="modal-body" style="height: 75vh;overflow-y: scroll;">
+        <div class="text-center" *ngIf="acceptTerms">
+          <p class="text-black text-center" style="font-size: 30px;font-weight: 700;">Entry Fee : 50 &#8377;</p>
+          <img src="../../../assets/The Pubg Banners/qr.jpg" alt="" class="img-fluid"
+            style="object-fit: cover;width: 350px;height: 410px;">
+        </div>
 
-      <div class="modal-body" style="height: 75vh;overflow-y: scroll;" *ngIf="acceptTerms === false">
-        <p *ngFor="let item of terms | keyvalue;let i = index">{{i + 1}}.{{item.value}}</p>
+        <div *ngIf="acceptTerms === false">
+          <p *ngFor="let item of terms | keyvalue;let i = index">{{i + 1}}.{{item.value}}</p>
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn" [ngClass]="modalHeader === 'Payments' ? 'btn-secondary' : 'btn-primary' "
-          data-dismiss="modal" (click)=hideQRCode()>{{btnText}}</button>
+        <div>
+          <label *ngIf="acceptTerms === false" class="text-dark"><input type="checkbox" value=""
+              (click)='showQrCode()'>I accept the terms and condition</label>
+        </div>
+        <div style="width: 45%; text-align: end;">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
